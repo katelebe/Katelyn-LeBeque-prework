@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  line-height: 1.5;
+  text-transform: uppercase;
+  background-color: rgb(97, 178, 189);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+#white {
+  color: white;
+}
+
+.centered {
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  line-height: 2;
+}
+
+span {
+  border-radius: 2px;
+  border: 2px solid white;
+  padding: 10px;
+}
