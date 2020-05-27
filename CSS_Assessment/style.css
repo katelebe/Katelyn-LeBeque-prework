@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header {
+    background: gray;
+    margin-bottom: 30px;
+}
+
+section {
+    line-height: 300px;
+}
+
+div {
+    overflow: auto;
+}
+
+#left {
+    background: blue;
+    width: 50%;
+    float: left;
+}
+
+#right {
+    background: red;
+    width: 25%;
+    float: right;
+}
+
+footer {
+    background: green;
+    margin-top: 100px;
+}
