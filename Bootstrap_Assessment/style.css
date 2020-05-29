@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  line-height: 1.5;
+  text-transform: uppercase;
+  background-color: rgb(97, 178, 189);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.jumbotron {
+  background:  rgb(97, 178, 189);
+  white-space: nowrap;
+}
+
+.card {
+  visibility: hidden;
+}
+
+a{
+  color: white;
+}
+
+h1 {
+  color: white;
+  font-size: 86px;
+}
+
+h3 {
+  font-family: 'Dancing Script', cursive;
+  text-transform: lowercase;
+}
+
+@media screen and (max-width: 768px) {
+  /* The body's bg color will be #333 */
+  body {
+    background-color: rgb(110, 122, 124);
+  }
+
+  .jumbotron {
+    white-space: normal;
+  }
+
+  .btn {
+    font-size: 24px;
+  }
+
+  .card {
+    visibility: visible;
+    min-width: fit-content;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  /* The body's bg color will be #333 */
+  body {
+    background-color: rgb(110, 122, 124);
+  }
+
+  h1 {
+    font-size: 76px;
+  }
+
+  .btn {
+    font-size: 32px;
+  }
+}
