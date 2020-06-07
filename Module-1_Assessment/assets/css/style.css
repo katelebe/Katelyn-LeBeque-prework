@@ -15,17 +15,13 @@ body {
 
 .navbar-light {
     background-color: #ffffff;
-    height: 70px;
     border-bottom: 2px solid #cccccc;
     overflow: auto;
-}
-
-.nav-inner {
-    top: 0;
+    padding: 0;
 }
 
 .mx-auto {
-    width: 75%;
+    width: 70%;
 }
 
 .navbar-light .navbar-brand {
