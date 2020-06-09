@@ -1,5 +1,7 @@
 // list of words to choose from
-const words = ['apple', 'pear', 'banana', 'peach', 'kiwi', 'orange', 'strawberry', 'blueberry', 'grapes'];
+const words = ['apple', 'pear', 'banana', 'peach', 'kiwi', 'orange', 'strawberry', 'blueberry', 'grape',
+'plum', 'tangerine', 'guava', 'tomato', 'watermelon', 'honeydew', 'cantaloupe', 'apricot', 'cherry',
+'grapefruit', 'kumquat', 'mango', 'papaya', 'pineapple', 'passionfruit', 'coconut'];
 
 // reference to html
 const unsolved = document.querySelector('#word');
@@ -10,7 +12,7 @@ let wins = document.querySelector('#wins');
 // initial states
 var guessedLetters = [];
 let badGuess = [];
-numGuesses = 10;
+numGuesses = 12;
 guesses.innerText = numGuesses;
 numWins = 0;
 wins.innerText = numWins;
@@ -29,7 +31,6 @@ const reset = function(){
 const randomWord = function() { 
     //random selection from list
     window.puzzle = words[Math.floor(Math.random()*words.length)];
-    console.log(puzzle);
     // to create blank word
     let unsolvedSpaces = '';
     for (let i = 0; i < puzzle.length; i++){
@@ -63,23 +64,23 @@ function guess(letter) {
 
 // decides whether letter is in randomWord or not
 function evaluateGuess(letter) {
-    var positions = [];
+    var locations = [];
     for (let i = 0; i < window.puzzle.length; i++) {
         // cases where guess is in randomWord, we want those letter locations
         if (window.puzzle[i] === letter) {
-            positions.push(i);
+            locations.push(i);
         } 
     };
 
     // *2 because in my string I have a space after each '_' ~it's kinda weird, but this works
-    for (let i = 0; i < positions.length; i++) {
-        unsolvedSpaces = unsolvedSpaces.substring(0, (2*positions[i])) + letter + unsolvedSpaces.substring(2*(positions[i])+1, unsolvedSpaces.length);
+    for (let i = 0; i < locations.length; i++) {
+        unsolvedSpaces = unsolvedSpaces.substring(0, (2*locations[i])) + letter + unsolvedSpaces.substring(2*(locations[i])+1, unsolvedSpaces.length);
         // updating puzzle display
         unsolved.innerText = unsolvedSpaces;
     };
 
     // cases where guess is NOT in randomWord
-    if (positions.length === 0) {
+    if (locations.length === 0) {
         // displays wrong letters
         badGuess.push(letter);
         wrong.innerText = badGuess.join(', ');
