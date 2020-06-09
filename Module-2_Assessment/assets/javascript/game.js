@@ -5,6 +5,7 @@ const words = ['apple', 'pear', 'banana', 'peach', 'kiwi', 'orange', 'strawberry
 
 // reference to html
 const image = document.querySelector('#image');
+const caption = document.querySelector('#caption');
 const start = document.querySelector('#start');
 const unsolved = document.querySelector('#word');
 let wrong = document.querySelector('#incorrect');
@@ -27,6 +28,7 @@ const reset = function(){
     wrong.innerText = badGuess;
     guesses.innerText = numGuesses;
     wins.innerText = numWins;
+    caption.innerText = '';
 };
 
 // initial set up of game
@@ -165,6 +167,7 @@ function newImage() {
 
     if (puzzle === 'tomato') {
         image.src = './assets/images/tomato.jpg';
+        caption.innerText = 'Yes! Tomatoes are fruits!';
     };
 
     if (puzzle === 'watermelon') {
