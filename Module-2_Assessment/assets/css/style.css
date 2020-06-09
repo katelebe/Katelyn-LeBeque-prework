@@ -1,12 +1,16 @@
 body {
     background-image: url('../images/halftone-yellow.png');
     font-family: 'Varela Round', sans-serif;
-    color: orangered;
     text-align: center;
 }
 
 .jumbotron {
-    margin: 70px;
-    background-image: url('../images/halftone-yellow.png');
+    margin: 60px;
+    background: rgb(255, 254, 224);
     overflow: auto;
+}
+
+.img-fluid {
+    max-width: 50%;
+    min-width: 175px;
 }

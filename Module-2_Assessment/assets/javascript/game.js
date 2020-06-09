@@ -4,6 +4,8 @@ const words = ['apple', 'pear', 'banana', 'peach', 'kiwi', 'orange', 'strawberry
 'grapefruit', 'kumquat', 'mango', 'papaya', 'pineapple', 'passionfruit', 'coconut'];
 
 // reference to html
+const image = document.querySelector('#image');
+const start = document.querySelector('#start');
 const unsolved = document.querySelector('#word');
 let wrong = document.querySelector('#incorrect');
 let guesses = document.querySelector('#guesses')
@@ -21,7 +23,7 @@ wins.innerText = numWins;
 const reset = function(){
     guessedLetters = [];
     badGuess = [];
-    numGuesses = 10;
+    numGuesses = 12;
     wrong.innerText = badGuess;
     guesses.innerText = numGuesses;
     wins.innerText = numWins;
@@ -40,6 +42,7 @@ const randomWord = function() {
     window.unsolvedSpaces = unsolvedSpaces
     unsolved.innerText = unsolvedSpaces;
     // game has begun, so we can remove the event listener that started it
+    start.innerText = 'Time to Start Guessing. . .'
     document.removeEventListener('keypress', randomWord);
 };
 
@@ -100,9 +103,123 @@ function guessUpdate() {
         reset();
         randomWord();
     };
+
     // Winning Situation
     if (unsolvedSpaces.search('_') === -1) {
         numWins++;
+        newImage();
+        start.innerText = 'Press enter for the next word!'
+        document.addEventListener('keydown', winReset);
+    };
+};
+
+// replace image with one of the correct fruit
+function newImage() {
+    if (puzzle === 'apple') {
+        image.src = './assets/images/apple.jpg';
+    };
+
+    if (puzzle === 'pear') {
+        image.src = './assets/images/pear.jpg';
+    };
+
+    if (puzzle === 'banana') {
+        image.src = './assets/images/banana.jpg';
+    };
+
+    if (puzzle === 'peach') {
+        image.src = './assets/images/peach.png';
+    };
+
+    if (puzzle === 'kiwi') {
+        image.src = './assets/images/kiwi.jpg';
+    };
+
+    if (puzzle === 'orange') {
+        image.src = './assets/images/orange.jpg';
+    };
+
+    if (puzzle === 'strawberry') {
+        image.src = './assets/images/strawberry.jpg';
+    };
+
+    if (puzzle === 'blueberry') {
+        image.src = './assets/images/blueberry.jpg';
+    };
+
+    if (puzzle === 'grape') {
+        image.src = './assets/images/grape.jpg';
+    };
+
+    if (puzzle === 'plum') {
+        image.src = './assets/images/plum.jpg';
+    };
+
+    if (puzzle === 'tangerine') {
+        image.src = './assets/images/tangerine.jpg';
+    };
+
+    if (puzzle === 'guava') {
+        image.src = './assets/images/guava.jpg';
+    };
+
+    if (puzzle === 'tomato') {
+        image.src = './assets/images/tomato.jpg';
+    };
+
+    if (puzzle === 'watermelon') {
+        image.src = './assets/images/watermelon.jpg';
+    };
+
+    if (puzzle === 'honeydew') {
+        image.src = './assets/images/honeydew.jpg';
+    };
+
+    if (puzzle === 'cantaloupe') {
+        image.src = './assets/images/cantaloupe.jpg';
+    };
+
+    if (puzzle === 'apricot') {
+        image.src = './assets/images/apricot.jpg';
+    };
+
+    if (puzzle === 'cherry') {
+        image.src = './assets/images/cherry.png';
+    };
+
+    if (puzzle === 'grapefruit') {
+        image.src = './assets/images/grapefruit.jpg';
+    };
+
+    if (puzzle === 'kumquat') {
+        image.src = './assets/images/kumquat.jpg';
+    };
+
+    if (puzzle === 'mango') {
+        image.src = './assets/images/mango.jpg';
+    };
+
+    if (puzzle === 'papaya') {
+        image.src = './assets/images/papaya.jpg';
+    };
+
+    if (puzzle === 'pineapple') {
+        image.src = './assets/images/pineapple.png';
+    };
+
+    if (puzzle === 'passionfruit') {
+        image.src = './assets/images/passionfruit.jpg';
+    };
+
+    if (puzzle === 'coconut') {
+        image.src = './assets/images/coconut.jpg';
+    };
+};
+
+// resets after a win
+function winReset() {
+    if (event.keyCode === 13) {
+        document.removeEventListener('keydown', winReset);
         reset();
         randomWord();
     };
