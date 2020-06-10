@@ -13,23 +13,28 @@ body {
     padding-left: 0;
 }
 
+#main {
+    width: 70%;
+}
+
+#other {
+    width: 60%;
+}
+
 .navbar-light {
     background-color: #ffffff;
     border-bottom: 2px solid #cccccc;
     overflow: auto;
     padding: 0;
-}
-
-.mx-auto {
-    width: 70%;
+    font-size: 0.8rem;
 }
 
 .navbar-light .navbar-brand {
     background-color: #4aaaa5;
-    padding: 20px;
+    padding: 15px;
     color: #ffffff;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .jumbotron {
@@ -71,18 +76,28 @@ img {
     padding-right: 24px;
 }
 
-.col-sm-4 {
-    margin-bottom: 15px;
+#photos {
+    margin-bottom: 20px;
 }
 
 .text-block {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     background-color:  #4aaaa5;
     color: #ffffff;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+    white-space: nowrap;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 175px;
+}
+
+p {
+    margin: 0px;
+}
 
 .footer {
     position: fixed;
@@ -93,5 +108,14 @@ img {
     line-height: 60px;
     background-color: #666666;
     border-top: 5px solid #4aaaa5;
+}
 
+@media screen and (max-width: 768px) {
+    #main {
+        width: 100%;
+    }
+    
+    #other {
+        width: 100%;
+    }
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title> About Me </title>
+    <title> Portfolio </title>
 </head>
 
 <body>
@@ -15,51 +15,63 @@
     <div class="container-fluid">
 
         <nav class="navbar sticky-top navbar-expand-md navbar-light">
-            <nav class="container-fluid mx-auto">
+            <nav class="container-fluid mx-auto" id="other">
                 <a class="navbar-brand" href="#"> Katelyn LeBeque </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end">
                     <div class="navbar-nav" style="line-height: 0.005;">
-                    <a class="nav-item nav-link" href="#" style="border-right: 1px solid #cccccc;"> About </a>
-                    <a class="nav-item nav-link" href="#" style="border-right: 1px solid #cccccc;"> Portfolio </a>
-                    <a class="nav-item nav-link" href="#"> Contact </a>
+                    <a class="nav-item nav-link" href="./index.html" style="border-right: 1px solid #cccccc;"> About </a>
+                    <a class="nav-item nav-link" href="./portfolio.html" style="border-right: 1px solid #cccccc;"> Portfolio </a>
+                    <a class="nav-item nav-link" href="./contact.html"> Contact </a>
                     </div>
                 </div>
             </nav>
         </nav>
 
-        <div class="jumbotron mx-auto">
-            <h1 style="white-space: nowrap;"> Portfolio </h1>
+        <div class="jumbotron mx-auto" id="other">
+            <h1 style="white-space: nowrap; font-size: 1.75rem;"> Portfolio </h1>
             <hr>
             
-            <div class="container-fluid">
+            <div class="container-fluid"> 
 
                 <div class="row">
-                    <div class="col-sm-4">
-                        <img src = './assets/images/practicepic.jpg' class="img-fluid" alt='make_it_fashion'>
+                    <div class="col-lg-4">
+                        <img src = './assets/images/city.jpg' class="img-fluid" alt='metropolis' id="photos">
                         <div class="text-block">
-                            <h4>Caption</h4>
-                          </div>
+                            <p>Cityscape</p>
+                        </div>
                     </div>
-                    <div class="col-sm-4">
-                        <img src = './assets/images/practicepic.jpg' class="img-fluid" alt='make_it_fashion'>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-4">
-                        <img src = './assets/images/practicepic.jpg' class="img-fluid" alt='make_it_fashion'>
-                    </div>
-                    <div class="col-sm-4">
-                        <img src = './assets/images/practicepic.jpg' class="img-fluid" alt='make_it_fashion'>
+                    <div class="col-lg-4">
+                        <img src = './assets/images/field.jpg' class="img-fluid" alt='wheat_field' id="photos">
+                        <div class="text-block">
+                            <p>Agriculture</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-4">
-                        <img src = './assets/images/practicepic.jpg' class="img-fluid" alt='make_it_fashion'>
+                    <div class="col-lg-4">
+                        <img src = './assets/images/forest.jpg' class="img-fluid" alt='pine_forest' id="photos">
+                        <div class="text-block">
+                            <p>Wilderness</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src = './assets/images/mountain.jpg' class="img-fluid" alt='misty_mountains' id="photos">
+                        <div class="text-block">
+                            <p>Mountain Range</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src = './assets/images/sand.jpg' class="img-fluid" alt='desert_footprints' id="photos">
+                        <div class="text-block">
+                            <p>Arid</p>
+                        </div>
                     </div>
                 </div>
 
@@ -70,7 +82,8 @@
         <footer class="footer"></footer>
 
     </div>
-    
+    <br>
+    <hr>
 </body>
 
 </html>
