@@ -22,7 +22,6 @@ wins.innerText = numWins;
 
 // throwing most into a function for ease later
 const reset = function(){
-    guessedLetters = [];
     badGuess = [];
     numGuesses = 12;
     wrong.innerText = badGuess;
@@ -43,6 +42,7 @@ const randomWord = function() {
     // global variable will be useful later
     window.unsolvedSpaces = unsolvedSpaces
     unsolved.innerText = unsolvedSpaces;
+    guessedLetters = [];
     // game has begun, so we can remove the event listener that started it
     start.innerText = 'Time to Start Guessing. . .'
     document.removeEventListener('keypress', randomWord);
@@ -207,7 +207,7 @@ function newImage() {
     };
 
     if (puzzle === 'pineapple') {
-        image.src = './assets/images/pineapple.png';
+        image.src = './assets/images/pineapple.jpg';
     };
 
     if (puzzle === 'passionfruit') {
